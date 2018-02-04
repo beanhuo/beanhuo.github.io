@@ -1,13 +1,25 @@
 ---
 layout: page
-title: 关于我 
+title: About Me
 ---
 
-一个 iOS SDK 开发者，喜欢研究一些新技术。
+I work as a storage SW engineer, responsibilities include:
 <p>
-平时喜欢整理个人博客，逛逛技术论坛。
+Storage SW development for EBU storage products such as NAND,NOR,eMMC,UFS,SSD.
 <p>
-了解一些 前端 基本概念和 Python 的简单用法。
+Storage SW support, Linux patches development and submit.
+<p>
+Storage stack benchmarking/analysis
+<p>
+Linux file system study and development
+<p>
+Presentation of analysis
+<p>
+Third Party SW vendor support
+<p>
+Like travels and photography
+<p>
+eager to study and learn newest technologies
 
 <p>
 
