@@ -5,21 +5,22 @@ title: About Me
 
 I work as a storage SW engineer, responsibilities include:
 <p>
-Storage SW development for EBU storage products such as NAND,NOR,eMMC,UFS,SSD.
+1. Storage SW development for EBU storage products such as NAND,NOR,eMMC,UFS,SSD.
 <p>
-Storage SW support, Linux patches development and submit.
+2. Storage SW support, Linux patches development and submit.
 <p>
-Storage stack benchmarking/analysis
+3. Storage stack benchmarking/analysis
 <p>
-Linux file system study and development
+4. Linux file system study and development
 <p>
-Presentation of analysis
+5. Presentation of analysis
 <p>
-Third Party SW vendor support
+6. Third Party SW vendor support
+<p>
 <p>
 Like travels and photography
 <p>
-Eager to study and learn newest technologies
+Eager to study and learn cutting-edge technologies
 
 <p>
 
