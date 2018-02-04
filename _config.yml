@@ -1,12 +1,13 @@
 # Basic
 title: Bean Blog
 subtitle: Personal Web
+SEOTitle: 豆豆鱼 Blog
 description: ~Welcome~
 # 头像里面的标题
-avatarTitle: leopardpan
+avatarTitle: Beanhuo
 # 头像里面的描述
-avatarDesc: iOS / 机器学习
-url: "http://baixin.io"
+avatarDesc: Linux / Storage
+url: "http://beanhuo.github.io"
 
 # Comment
 comment:
@@ -18,7 +19,7 @@ social:
     weibo: 5366874726 
     github: leopardpan
     # twitter: 
-    mail: leopardpan@icloud.com
+    mail: jackyard88@gmail.com
 
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
