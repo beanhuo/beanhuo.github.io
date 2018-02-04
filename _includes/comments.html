@@ -1,9 +1,9 @@
 <section class="post-comments">
 
-  {% if site.comment.uyan %}
+  {% if beanhuo.github.io %}
     <div id="uyan_frame"></div>
 
-    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="+'{{ site.comment.uyan }}'></script>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="+'{{ beanhuo.github.io }}'></script>
 
   {% elsif site.comment.disqus %}
     <div id="disqus_thread"></div>
@@ -13,7 +13,7 @@
         this.page.url = "{{ page.url | prepend: site.baseurl | prepend: site.url }}";
         this.page.identifier = "{{ page.url }}";
     };
-    var disqus_shortname = '{{ site.comment.disqus }}';
+    var disqus_shortname = '{{ beanhuo.github.io }}';
     
     (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
