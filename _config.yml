@@ -18,7 +18,7 @@ comment:
 social:
     weibo: jackyard
     github: beanhuo
-    # twitter: 
+    #twitter: 
     mail: jackyard88@gmail.com
 
 # 百度统计 
@@ -28,9 +28,9 @@ social:
 
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
-ga:
-    id: UA-84134159-3   
-    host: auto  
+#ga:
+#   id: UA-84134159-3   
+#    host: auto  
 
 # Disqus settings（https://disqus.com/）
 disqus_username: beanhuo
