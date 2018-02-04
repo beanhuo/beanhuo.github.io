@@ -19,7 +19,7 @@ Third Party SW vendor support
 <p>
 Like travels and photography
 <p>
-eager to study and learn newest technologies
+Eager to study and learn newest technologies
 
 <p>
 
