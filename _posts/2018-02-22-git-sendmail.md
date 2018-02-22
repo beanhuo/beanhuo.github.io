@@ -10,14 +10,16 @@ tag: Git
 
 ### .gitconfig
 
->[user]
->name = xxx
->email = xxx@xxx.com
->[sendemail]
->smtpencryption = tls
->smtpserver = smtp.gmail.com
->smtpuser = xxx@gmail.com
->smtpserverport = 587
+```
+[user]
+name = xxx
+email = xxx@xxx.com
+[sendemail]
+smtpencryption = tls
+smtpserver = smtp.gmail.com
+smtpuser = xxx@gmail.com
+smtpserverport = 587
+```
 
 ###  cleanfile
 如果需要，在提交之前， run ./script/cleanfile xx.c
