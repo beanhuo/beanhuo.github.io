@@ -59,7 +59,11 @@ it contains two files, one is rootfs, another is boot.img, which includes grub.i
 after getting download all of above images and source code, just follow how to flash Debian on Hikey960.
 https://wiki.debian.org/InstallingDebianOn/96Boards/HiKey960
 
-initially flash above images file to UFS. for the next steps, we just to port XEN and update grub.
+initially flash above images file to UFS. for the next steps, we only to port XEN and update grub.
+I pre-flashed boot and rootfs images since I want to confirm my all dowloaded files are ok.
+
+According to the WiKi, you don't need to flash boot.img (boot-0.0.. so on) and system.img (rpb-console-<something>rootfs.img.gz.
+because we will change its kernel image and grub.img later. this depends on your. pre-flash doesn't involve any problem.
 
 
 
