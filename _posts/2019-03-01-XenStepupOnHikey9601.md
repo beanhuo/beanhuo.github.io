@@ -56,6 +56,12 @@ http://snapshots.linaro.org/96boards/hikey/linaro/debian/19/
 
 it contains two files, one is rootfs, another is boot.img, which includes grub.img.
 
+after getting download all of above images and source code, just follow how to flash Debian on Hikey960.
+https://wiki.debian.org/InstallingDebianOn/96Boards/HiKey960
+
+initially flash above images file to UFS. for the next steps, we just to port XEN and update grub.
+
+
 
 
 
