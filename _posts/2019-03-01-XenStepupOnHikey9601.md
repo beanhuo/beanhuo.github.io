@@ -43,14 +43,17 @@ if your board already flashed them, actaully, you don't need these step's images
 
 #### 5. wl18xx-fw-4.bin
 git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+
 this is WIFI network card driver.
 
 #### 6.Xen source code
 git clone git://xenbits.xen.org/xen.git
+
 I tried 4.12, and 4.8, both work on Hikey960.
 
 #### 7. Debian images
 http://snapshots.linaro.org/96boards/hikey/linaro/debian/19/
+
 it contains two files, one is rootfs, another is boot.img, which includes grub.img.
 
 
