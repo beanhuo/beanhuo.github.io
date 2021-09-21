@@ -73,7 +73,7 @@ tags: Linux
 	from the upper layer.
 	Here has two conditions, with CQE and without CQE:
 
-	** 1) with CQE **
+** 1) with CQE **
 	CQE will use HW timer in the emmc core for the data transfer, and its callback flow:
 	
 ```
@@ -91,22 +91,22 @@ tags: Linux
 			/*set register SDHCI_TIMEOUT_CONTROL   0x2E to be 0xe */   
 ```
 
-	 *Note: no matter how eMMC upper layer caculate the timeout value in 
+* Note: no matter how eMMC upper layer caculate the timeout value in 
 	 mmc_blk_data_prep()->mmc_set_data_timeout(), the CQE driver will
-	 always set maximum timeout value for CQE request.*
+	 always set maximum timeout value for CQE request. *  
 	  
 	  
-	HW timeout TMCLK is set in the eMMC host capacity regisger 0x40:
+	HW timeout TMCLK is set in the eMMC host capacity regisger 0x40:  
 	sdhci_setup_host()
 	  sdhci_read_caps()---...>host->caps = sdhci_readl(host, SDHCI_CAPABILITIES);
 
-	** 2) without CQE **
+** 2) without CQE **
 	
 	If CQE is disabled, there will be two timers for the request coming from upper
 	layer. one is HW timer for data line timeout of data transfer, another one is
-	the SW timer for waiting for the completion interruption:
+	the SW timer for waiting for the completion interruption:  
 	
-	*HW timer setup flow:*
+* HW timer setup flow:  
 	
 ```
 		mmc_blk_mq_issue_rq()
@@ -120,19 +120,19 @@ tags: Linux
 	set DHCI_TIMEOUT_CONTROL to be value set in mmc_set_data_timeout()
 	
 	
-	------------
+----------------------
 	For some SDHCI controller, if they have SDHCI_QUIRK2_DISABLE_HW_TIMEOUT,
 	and calculated timeout value is too big and beyond the HW timer capacity,
-	eMMc driver will disable this HW timeout timer for data transfer.
+	eMMc driver will disable this HW timeout timer for data transfer.  
 	
 	
-	*SW timeout timer setup*
+* SW timeout timer setup*
 	
 	No matter it is data transfer request or non-data transfer request(such as flush,
 	erase, discard), this SW timer will be explicityly setup before issuing this
-	request to the eMMC device;
+	request to the eMMC device;  
 	
-	mmc_blk_mq_issue_rq() or mmc_switch()---->sdhci_send_command()
+	mmc_blk_mq_issue_rq() or mmc_switch()---->sdhci_send_command()  
 	  
 ```
 	timeout = jiffies;                                                       
@@ -182,7 +182,7 @@ tags: Linux
 #### How to disable Hw timeout for data-transfer
 
 
-1. Firstly you should add this quirk SDHCI_QUIRK2_DISABLE_HW_TIMEOUT in the eMMC host driver,
+* 1. Firstly you should add this quirk SDHCI_QUIRK2_DISABLE_HW_TIMEOUT in the eMMC host driver,
 TI added this quirk since v4.18
 
 ```
@@ -210,7 +210,7 @@ static const struct sdhci_pltfm_data sdhci_omap_pdata = {
 ```
 
 
-2. then the timeout value requried by eMMC should be bigger that host HW timer.
+* 2. then the timeout value requried by eMMC should be bigger that host HW timer.
 
 
 
