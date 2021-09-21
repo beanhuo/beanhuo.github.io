@@ -23,7 +23,7 @@ tags: Linux
        --- eMMC Device ---        
 
 
- #### >1< -- block layer
+#### >1< -- block layer
  
     For the data tranfer request, which is  REQ_OP_READ and REQ_OP_WRITE, there will  
     set the SW timeout value with queue's q->rq_timeout  
@@ -132,7 +132,7 @@ tags: Linux
 	erase, discard), this SW timer will be explicityly setup before issuing this
 	request to the eMMC device;
 	
-	  mmc_blk_mq_issue_rq() or mmc_switch()---->sdhci_send_command()
+	mmc_blk_mq_issue_rq() or mmc_switch()---->sdhci_send_command()
 	  
 ```
 	timeout = jiffies;                                                       
