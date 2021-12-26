@@ -375,6 +375,10 @@ sdhci_timeout_timer() will be envoked,
 then the work  sdhci_complete_work() will be waken up, it will result in reset DAT and 
 CMD line.
 
+#### Retry command
+
+In case of above timeout, there will be retry:
+
 
 
 
