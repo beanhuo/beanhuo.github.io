@@ -47,22 +47,6 @@ Jekyll 需要依赖：Ruby、bundler
 搭建博客如果遇到问题可以看看我教程[Jekyll搭建个人博客](http://baixin.io/2016/10/jekyll_tutorials1/)。
 
 
-### 效果预览
-
-#### 头像效果
-
-![](/images/readme//icon.gif)
-
-如果你只想要我博客里的头像效果，你只需要拿 leopardpan.github.io/_includes/side-panel.html 文件里面 `头像效果` 和 leopardpan.github.io/css/main.css 里面最后面 `头像效果` 部分就行了。
-
-
-***
-leopard](http://baixin.io) 是一个简洁的博客模板，如果你也喜欢请 Star ，你的 Star 是我持续更新的动力, 谢谢 😄.
-#### 博客首页   
-
-![](/images/readme//img4.png)   
-
-***  
 
 本博客在[Vno Jekyll](https://github.com/onevcat/vno-jekyll)基础上修改的。  
 
