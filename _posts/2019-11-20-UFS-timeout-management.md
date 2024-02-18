@@ -6,7 +6,7 @@ tags: Linux
 ---
 
 
-### UFS timeout management  
+## UFS timeout management  
 
 UFS only has the SW timeout timer in the block layer, it doesn't have a HW timer on the
 host side.
