@@ -1,7 +1,7 @@
 ---
 layout: post
 title: eMMC timeout management in Linux&Uboot
-date: 2019-11-20 
+date: 2018-11-20 
 tags: Linux
 ---
 
