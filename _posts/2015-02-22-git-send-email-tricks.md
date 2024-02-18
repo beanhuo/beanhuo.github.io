@@ -5,7 +5,9 @@ date: 2015-02-22
 tag: Git
 ---
 
+
 # 用git提交patch，并发送邮件
+
 ### 安装 git git-email
 > apt-get install git git-core git-email
 
@@ -68,6 +70,7 @@ smtpserverport = 587
 
 之后我们就可以用下面的命令方式来提交PATCH
 > git send-email --identity=lkml  ./*.patch
+
 
 # 如何配置Git发送git-commit 邮件通知
 
