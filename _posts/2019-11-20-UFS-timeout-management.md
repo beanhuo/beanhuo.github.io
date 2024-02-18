@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2019-11-20-UFS-timeout-management
+title: UFS-timeout-management
 date: 2019-11-20 
 tags: Linux
 ---
