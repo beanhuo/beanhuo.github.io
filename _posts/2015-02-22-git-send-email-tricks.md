@@ -6,7 +6,7 @@ tag: Git
 ---
 
 
-# 用git提交patch，并发送邮件
+# 用git提交patch，并发送邮件   
 
 ### 安装 git git-email
 > apt-get install git git-core git-email
@@ -72,7 +72,7 @@ smtpserverport = 587
 > git send-email --identity=lkml  ./*.patch
 
 
-# 如何配置Git发送git-commit 邮件通知
+# 如何配置Git发送git-commit 邮件通知    
 
 ### 什么是git hook
 Git hook 是用来探测当前git 仓有没有人提交更新到本git Server,如果有新的git push,git hook会根据
