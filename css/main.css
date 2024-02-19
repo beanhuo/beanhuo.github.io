@@ -702,7 +702,8 @@ img::-moz-selection {
 
   nav {
     display: inline-block;
-    position: relative; 
+    position: relative;
+    font-size: 20px; /* Adjust the size as needed */
   }
   .navigation {
     display: inline-block;
