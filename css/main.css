@@ -704,6 +704,7 @@ img::-moz-selection {
     display: inline-block;
     position: relative;
     font-size: 20px; /* Adjust the size as needed */
+    font-weight: bold; /* This makes the text bold */
   }
   .navigation {
     display: inline-block;
