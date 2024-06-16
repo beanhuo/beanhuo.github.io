@@ -265,6 +265,7 @@ int scsi_error_handler(void *data)
 }                                                                                
    
 ```
+## summary:
 
 To understand UFS (Universal Flash Storage) timeout management in the context of the Linux SCSI subsystem, let's break down the key aspects of the provided code and its flow:
 
