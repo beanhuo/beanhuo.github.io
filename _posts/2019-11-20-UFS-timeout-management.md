@@ -20,7 +20,7 @@ scsi_queue_rq() //scsi_lib.c
 	
 ```
 
-scsi based storage, you can change its queue timeout through sysfs node "timeout"
+SCSI-based storage, you can change its queue timeout through sysfs node "timeout"
 
 
 
@@ -266,5 +266,47 @@ int scsi_error_handler(void *data)
    
 ```
 
+To understand UFS (Universal Flash Storage) timeout management in the context of the Linux SCSI subsystem, let's break down the key aspects of the provided code and its flow:
 
+### Timeout Setup in the Block Layer
+
+1. **Initialization of the Queue Timeout**:
+   - The queue timeout for SCSI-based storage devices is set during the `sd_probe()` function.
+   - The actual setup of the timeout occurs in `blk_mq_init_allocated_queue()` where `blk_queue_rq_timeout(q, set->timeout ? set->timeout : 30 * HZ);` is called, setting the default timeout to 30 seconds (`30 * HZ`).
+
+2. **Command Dispatch and Timeout Handling**:
+   - When a command is queued, `scsi_queue_rq()` is invoked, which calls `blk_mq_start_request(req)` and `scsi_dispatch_cmd()`.
+   - If a command times out, `scsi_timeout()` is called, which in turn calls `scsi_times_out(req)`.
+
+### Handling Timeouts
+
+1. **Primary Timeout Handling in `scsi_times_out`**:
+   - Within `scsi_times_out`, various checks and logs are performed.
+   - If the host's `eh_timed_out` function is not set (`UFS didn't initialize this hooker`), the function proceeds to attempt to abort the command using `scsi_abort_command(scmd)`.
+
+2. **Command Abort Handling in `scsi_abort_command`**:
+   - The function schedules an abort work via `queue_delayed_work(shost->tmf_work_q, &scmd->abort_work, HZ / 100);` and returns `SUCCESS`.
+
+3. **Abort Work Execution in `scmd_eh_abort_handler`**:
+   - This handler tries to abort the command via `scsi_try_to_abort_cmd()`.
+   - Depending on the result, it may either retry the command, finish it, or add it to the error handling list using `scsi_eh_scmd_add(scmd)`.
+
+### Error Handling Flow
+
+1. **SCSI Error Handler**:
+   - If the command abort fails, the `scsi_error_handler()` is invoked.
+   - The error handler manages error recovery for the SCSI host. It checks if there are any failed commands and invokes the appropriate error handling strategy.
+
+2. **UFS Specific Error Handling**:
+   - For UFS devices, if a specific error handler (`eh_strategy_handler`) is defined in the transport layer (`shost->transportt`), it will be invoked to handle the error.
+
+### Practical Implications for UFS
+
+- **Timeout Value**: The default timeout value is 30 seconds.
+- **Error Recovery**: If a UFS command times out, the system will try to abort the command and, upon failure, will invoke the error handler.
+- **Retries**: Commands can be retried up to a maximum of 5 times as set in `sd_probe()`.
+
+### Conclusion
+
+The timeout management for UFS in the Linux kernel leverages the existing SCSI subsystem's mechanisms for handling timeouts and errors. The flow involves initializing a default timeout, attempting to abort timed-out commands, and invoking error recovery strategies as needed. The specific details of UFS error handling depend on the transport layer implementation for UFS, which can define custom error handling strategies.
 
