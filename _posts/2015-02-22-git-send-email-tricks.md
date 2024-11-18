@@ -2,7 +2,7 @@
 layout: post
 title: "git send-email tricks"
 date: 2015-02-22   
-tag: Git
+tag: Git,工具
 ---
 
 
