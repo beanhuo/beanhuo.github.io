@@ -72,7 +72,9 @@ If the static binary fails to run:
 
 ---
 
-### **5. Alternative: Use a Musl-Based Python (Linux)**
+## ALternative/Optional Steps
+
+### **1. Alternative: Use a Musl-Based Python (Linux)**
 For full static linking on Linux:
 1. Install Musl libc and Python:
    ```bash
@@ -82,7 +84,7 @@ For full static linking on Linux:
 
 ---
 
-### **6. Optional: Containerize for Maximum Portability**
+### **2. Optional: Containerize for Maximum Portability**
 If static compilation is too complex or fails, package the program in a Docker container:
 1. Create a `Dockerfile`:
    ```dockerfile
