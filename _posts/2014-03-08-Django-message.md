@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Django: messages.success(), messages.error(), and JsonResponse()
+title: Django: Django-message
 date: 2014-03-08 
 tags: Django   
 ---
 
 
-# Django: messages.success(), messages.error(), and JsonResponse()
+# messages.success(), messages.error(), and JsonResponse()
 
 --------
 
