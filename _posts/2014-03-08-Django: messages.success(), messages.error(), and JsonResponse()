@@ -1,3 +1,9 @@
+---
+layout: post
+title: Django: messages.success(), messages.error(), and JsonResponse()
+date: 2014-03-08 
+tags: Django    
+---
 
 Django: messages.success(), messages.error(), and JsonResponse()
 ================================================================
@@ -124,4 +130,3 @@ javascriptCopy
 
 Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   const xhr = new XMLHttpRequest();  xhr.open("POST", "/submit/", true);  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");  xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");  // Indicate this is an AJAX request  xhr.onreadystatechange = function () {      if (xhr.readyState === XMLHttpRequest.DONE) {          if (xhr.status === 200) {              const response = JSON.parse(xhr.responseText);              if (response.status === "success") {                  alert(response.message);  // Display success message              } else if (response.status === "error") {                  alert(response.message);  // Display error message              }          } else {              alert("An unexpected error occurred. Please try again.");          }      }  };  xhr.send(new URLSearchParams(new FormData(form)));   `
 
-This Markdown document provides a clear explanation of the differences and use cases for messages.success(), messages.error(), and JsonResponse(). You can now add it to your blog! Let me know if you need further assistance. 😊
