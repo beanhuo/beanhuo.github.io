@@ -4,7 +4,7 @@ title: About Me
 ---
 
        
-## Welcome to My Blog!
+### Welcome to My Blog!
 
 In this rapidly changing era, new knowledge awaits us every day, and fresh challenges beckon us to face them. Whether diving deep into professional fields or savoring the experiences of daily life, I believe every step is worth documenting. This belief led to the creation of this blog—a platform to record my work experiences, learning insights, and life reflections.
 
@@ -12,13 +12,13 @@ Whether you're a learner seeking specific knowledge or a friend curious about ev
 
 Thank you for visiting. May each article here touch your heart and spark your thoughts. Let's journey together on this path of learning and create a more exciting tomorrow!
 
-## About Me
+### About Me
 
 With over 12 years of experience in software engineering, I currently hold a pivotal role at Micron Technology, leading the design, development, and integration of software solutions for Micron's storage products. I have extensive experience in Linux kernel development, having served as a core and senior software engineer at Micron for over eight years. During this period, I have made significant contributions to multiple kernel subsystems, device drivers, and performance optimization projects. Additionally, I have practical experience in platform and OS BSP engineering, having developed and debugged various embedded systems and devices during my tenures at NSN and Samsung Electro-Mechanics.
 
 I am passionate about exploring ways to enhance IO storage performance and maximize the value of data. This passion drives me to innovate continually, developing scalable software solutions, valuing teamwork, committing to continuous learning, and striving for high-quality results. I am always eager to embrace and solve challenges.
 
-### Professional Responsibilities
+#### Professional Responsibilities
 
 As a storage software engineer, my responsibilities include:
 
@@ -29,26 +29,15 @@ As a storage software engineer, my responsibilities include:
 5. **Presentation of Analysis**: Presenting the results of my analyses.
 6. **Third-Party Software Vendor Support**: Providing support to third-party software vendors.
 
-### Interests
+#### Interests
 
 Outside of work, I enjoy traveling and photography. I am also eager to study and learn cutting-edge technologies.
 
-### Blog Sections
+#### Blog Sections
 
 - **Professional Insights**: Articles and posts related to my work experiences, Linux kernel development, storage solutions, and performance optimization.
 - **Learning and Development**: Insights into new technologies, skill development, and continuous learning.
 - **Lifestyle and Reflections**: Personal reflections, travel experiences, photography, and more.
-
-### Join Me on This Journey
-
-I invite you to join me on this journey of exploration and growth. Whether you're here for professional insights or personal stories, I hope you find value in the content shared. Let's create a vibrant community of learners and explorers, striving together for a more exciting and fulfilling tomorrow.
-
-<p>
-
-如果你想查看本人之前的博文，可以从CSDN中获取
-<a href="http://blog.csdn.net/jackyard"> BeanHuo CSDN </a>
-<p>
-
 
 
 {% include comments.html %}
