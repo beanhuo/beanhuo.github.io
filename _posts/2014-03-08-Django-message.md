@@ -6,10 +6,10 @@ tags: Django
 ---
 
 
-# messages.success(), messages.error(), and JsonResponse()
-___________________________________________________________
+# **messages.success(), messages.error(), and JsonResponse()**
 
---------
+
+---------------
 
 In Django, there are multiple ways to send feedback or data from the backend to the frontend. This post explains the differences between messages.success(), messages.error(), and JsonResponse(), along with examples for each.
 
@@ -25,7 +25,7 @@ Use messages.success() and messages.error() when:
 - You want to display a message after a page reload or redirect.
 - You are not using JavaScript for form submission (e.g., traditional form submission with a page reload).
 
-**Example**
+**Example:**
 
 ### Backend
 
@@ -60,8 +60,6 @@ def submit_handler(request):
         {% endfor %}
     </div>
 {% endif %}
-
-
 ```
 
 ### Frontend (JavaScript)
