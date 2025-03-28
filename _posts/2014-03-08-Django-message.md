@@ -7,10 +7,11 @@ tags: Django
 
 
 # messages.success(), messages.error(), and JsonResponse()
+___________________________________________________________
 
 --------
 
-　In Django, there are multiple ways to send feedback or data from the backend to the frontend. This post explains the differences between messages.success(), messages.error(), and JsonResponse(), along with examples for each.
+In Django, there are multiple ways to send feedback or data from the backend to the frontend. This post explains the differences between messages.success(), messages.error(), and JsonResponse(), along with examples for each.
 
 ## 1. messages.success() and messages.error()
 
