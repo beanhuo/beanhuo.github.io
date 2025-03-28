@@ -13,7 +13,7 @@ ___________________________________________________________
 
 In Django, there are multiple ways to send feedback or data from the backend to the frontend. This post explains the differences between messages.success(), messages.error(), and JsonResponse(), along with examples for each.
 
-## 1. messages.success() and messages.error()
+# messages.success() and messages.error()
 
 * Purpose
     * Part of Django's messaging framework.
@@ -95,7 +95,7 @@ xhr.send(new URLSearchParams(new FormData(form)));
 
 
 
-## 2. JsonResponse()
+# JsonResponse()
 
 Purpose
 Used to return JSON-encoded responses from the backend to the frontend.
