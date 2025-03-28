@@ -15,21 +15,17 @@ In Django, there are multiple ways to send feedback or data from the backend to 
 
 ## messages.success() and messages.error()
 
-* Purpose
-    * Part of Django's messaging framework.
+**Purpose**
+- Part of Django's messaging framework.
+- Used to send one-time notifications (e.g., success or error messages) to the user after a form submission or other actions.
+- Messages are stored in the session and displayed on the next page the user visits.
 
-    * Used to send one-time notifications (e.g., success or error messages) to the user after a form submission or other actions.
-
-    * Messages are stored in the session and displayed on the next page the user visits.
-
-* When to Use
+**When to Use**
 Use messages.success() and messages.error() when:
+- You want to display a message after a page reload or redirect.
+- You are not using JavaScript for form submission (e.g., traditional form submission with a page reload).
 
-You want to display a message after a page reload or redirect.
-
-You are not using JavaScript for form submission (e.g., traditional form submission with a page reload).
-
-* Example
+**Example**
 Backend
 
 ```
@@ -91,30 +87,20 @@ xhr.send(new URLSearchParams(new FormData(form)));
 
 ```
 
-
-
-
-
 ## JsonResponse()
 
-Purpose
-Used to return JSON-encoded responses from the backend to the frontend.
+**Purpose**
+ - Used to return JSON-encoded responses from the backend to the frontend.
+ - Commonly used in AJAX-based applications where the frontend (JavaScript) handles the response dynamically without reloading the page.  
+**When to Use**
+Use JsonResponse when:  
+- You are using JavaScript (e.g., XMLHttpRequest or fetch) to submit forms or make requests.   
+- You want to update the UI dynamically without reloading the page.
+- You need to send structured data (e.g., status, message, or additional data) to the frontend.
 
-Commonly used in AJAX-based applications where the frontend (JavaScript) handles the response dynamically without reloading the page.
+**Example** 
 
-When to Use
-Use JsonResponse when:
-
-You are using JavaScript (e.g., XMLHttpRequest or fetch) to submit forms or make requests.
-
-You want to update the UI dynamically without reloading the page.
-
-You need to send structured data (e.g., status, message, or additional data) to the frontend.
-
-Example
-
-
-Backend
+### Backend
 
 ```
 from django.http import JsonResponse
@@ -138,12 +124,10 @@ def submit_handler(request):
             }, status=400)  # Use an appropriate HTTP status code (e.g., 400 for bad request)
 ```
 
-
-When to Use Which?
-Use messages.success() / messages.error()
-When you want to display a message after a page reload or redirect.
-
-When you are not using JavaScript for form submission.
+**When to Use Which?**
+- Use messages.success() / messages.error()
+- When you want to display a message after a page reload or redirect.
+- When you are not using JavaScript for form submission.  
 
 Example: Traditional form submissions where the user is redirected to a new page.
 
