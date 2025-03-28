@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Django: Django-message
+title: Django-message
 date: 2014-03-08 
 tags: Django   
 ---
