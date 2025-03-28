@@ -26,7 +26,8 @@ Use messages.success() and messages.error() when:
 - You are not using JavaScript for form submission (e.g., traditional form submission with a page reload).
 
 **Example**
-Backend
+
+### Backend
 
 ```
 from django.contrib import messages
@@ -46,7 +47,9 @@ def submit_handler(request):
             messages.error(request, f"An error occurred: {e}")
             return redirect('lioscope_app:iokpp-submit')  # Redirect to the same page
 ```
-Frontend (Template)
+
+### Frontend (Template)
+
 ```
 {% if messages %}
     <div class="messages">
@@ -59,9 +62,9 @@ Frontend (Template)
 {% endif %}
 
 
-```  
-Frontend (JavaScript)
+```
 
+### Frontend (JavaScript)
 
 ```
 const xhr = new XMLHttpRequest();
@@ -131,19 +134,17 @@ def submit_handler(request):
 
 Example: Traditional form submissions where the user is redirected to a new page.
 
-Use JsonResponse()
-When you want to update the UI dynamically without reloading the page.
-
-When you are using JavaScript (e.g., XMLHttpRequest or fetch) for form submission.
+### Use JsonResponse()
+- When you want to update the UI dynamically without reloading the page
+- When you are using JavaScript (e.g., XMLHttpRequest or fetch) for form submission.
 
 Example: AJAX-based form submissions where the response is handled by JavaScript.
 
 Combining Both Approaches
 In some cases, you might want to use both approaches. For example:
 
-Use JsonResponse for AJAX-based form submissions.
-
-Use messages.success() / messages.error() as a fallback for non-JavaScript users.
+- Use JsonResponse for AJAX-based form submissions.
+- Use messages.success() / messages.error() as a fallback for non-JavaScript users.
 
 
 ```
