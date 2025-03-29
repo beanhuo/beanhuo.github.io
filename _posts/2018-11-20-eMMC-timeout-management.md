@@ -7,22 +7,30 @@ tags: Linux
 
 ### eMMC timeout management  
 
+For eMMC, we implement two levels of timeout management:
+1. **Block Layer Timeout**
+2. **eMMC Core Timeout**
 
-    For the eMMC, we have thwo levels of timeout managemnt: one is in block layer, the second one is in the eMMC core, it shows as below:     
-    
-
-  ---     VFS     ---
-  ---     FS      ---
-  --- Block layer ---  > 1. set up SW timeout timer for each request before dispatch the request to the next layers
-      	   |
-      	   |
-      	   V
-  ---    MMC Core ---  > 2. 1) if it is data tranfer, setup HW/SW timeout for each request, for data line timeout    
-	|             		    2) setup a SW timeout for waiting for the completion interruption    
-	|  
-	V  
-  --- eMMC Device ---        
-
+```markdown
+  +---------------+
+  |     VFS       |
+  +---------------+
+  |     FS        |
+  +---------------+
+  |  Block Layer  | -> 1. Sets SW timeout timer for each request before dispatching
+  +---------------+
+          |
+          v
+  +---------------+
+  |   MMC Core    | -> 2.1) For data transfer: Sets HW/SW timeout (data line timeout)
+  |               |    2.2) Sets SW timeout for completion interrupt
+  +---------------+
+          |
+          v
+  +---------------+
+  | eMMC Device   |
+  +---------------+
+```
 
 #### 1. block layer
  
