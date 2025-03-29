@@ -28,7 +28,7 @@
 | **GitHub Repo**           | [jekyll/jekyll](https://github.com/jekyll/jekyll) | [gohugoio/hugo](https://github.com/gohugoio/hugo) |
 
 
-# Markdown 基本语法 / Basic Markdown Syntax
+## Markdown 基本语法 / Basic Markdown Syntax
 
 ## 标题 / Headers
 # H1 / `# Header 1`  
