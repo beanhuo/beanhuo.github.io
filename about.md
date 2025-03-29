@@ -13,7 +13,7 @@ title: About Me
 
 With **12+ years** of experience in **software engineering, Linux, platform devleopment, embedded system**, I currently specialize in designing and developing high-performance storage solutions at **Micron Technology**.
 
-I’m deeply passionate about **storage performance optimization** and **data-driven innovation**. My work focuses on building scalable software, fostering collaboration, and delivering robust solutions. I thrive on challenges and believe in continuous learning to push technological boundaries.   
+I’m deeply passionate about **storage performance optimization** and **data-driven innovation**. My work focuses on building scalable software, fostering collaboration, and delivering robustSoftware solutions. I thrive on challenges and believe in continuous learning to push technological boundaries.   
 
 ---------  
 
@@ -30,11 +30,11 @@ As a **Storage Software Engineer**, I lead projects in:
 
 Let’s connect and explore how we can drive innovation together!  
 
-#### Interests
+#### **Interests**
 
 Outside of work, I enjoy traveling and photography. I am also eager to study and learn cutting-edge technologies.
 
-#### Blog Sections
+#### **Blog Sections**
 
 - **Professional Insights**: Articles and posts related to my work experiences, Linux kernel development, storage solutions, and performance optimization.
 - **Learning and Development**: Insights into new technologies, skill development, and continuous learning.
