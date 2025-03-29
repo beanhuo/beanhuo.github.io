@@ -6,7 +6,7 @@ title: About Me
        
 ### Welcome to My Blog!
 
-<div style="font-size: 18px;"> Thanks for visiting! I hope you like what you read here. Let’s discover new ideas and make life more exciting—together! </div>  
+<span style="font-family: Arial, Helvetica, sans-serif; text-decoration: underline;"> Thanks for visiting! I hope you like what you read here. Let’s discover new ideas and make life more exciting—together! </span> 
   
 
 ### About Me
