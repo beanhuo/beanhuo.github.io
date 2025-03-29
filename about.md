@@ -6,13 +6,13 @@ title: About Me
        
 ### Welcome to My Blog!
 
-Thanks for visiting! I hope you like what you read here. Let’s discover new ideas and make life more exciting—together!
+<div style="font-size: 20px;"> Thanks for visiting! I hope you like what you read here. Let’s discover new ideas and make life more exciting—together! </div>
 
 ### About Me
 
-With **12+ years** of experience in **software engineering, Linux, platform devleopment, embedded system**, I currently specialize in designing and developing high-performance storage solutions at **Micron Technology**.
+<div style="font-size: 20px;"> With **12+ years** of experience in **software engineering, Linux, platform devleopment, embedded system**, I currently specialize in designing and developing high-performance storage solutions at **Micron Technology**.
 
-I’m deeply passionate about **storage performance optimization** and **data-driven innovation**. My work focuses on building scalable software, fostering collaboration, and delivering robust solutions. I thrive on challenges and believe in continuous learning to push technological boundaries.  
+I’m deeply passionate about **storage performance optimization** and **data-driven innovation**. My work focuses on building scalable software, fostering collaboration, and delivering robust solutions. I thrive on challenges and believe in continuous learning to push technological boundaries.  </div>
 
 ---
 
