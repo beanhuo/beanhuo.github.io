@@ -15,7 +15,7 @@ With **12+ years** of experience in **software engineering, Linux, platform devl
 
 I’m deeply passionate about **storage performance optimization** and **data-driven innovation**. My work focuses on building scalable software, fostering collaboration, and delivering robust solutions. I thrive on challenges and believe in continuous learning to push technological boundaries.   
 
----
+---------  
 
 ### **Key Responsibilities**  
 
