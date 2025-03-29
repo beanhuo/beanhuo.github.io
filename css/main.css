@@ -129,6 +129,7 @@ h3 {
   background:#462c11;
    /*#B9D3EE*/
   /*0px right, 5px botton, 5px fuzzy*/
+  color: white;        /* White text */
   box-shadow: 0px 5px 5px #9FB6CD;
   border-left: 6px solid #1874CD; 
   position:relative;
