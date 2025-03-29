@@ -4,12 +4,12 @@ title: About Me
 ---
 
        
-#Welcome to My Blog!
+# Welcome to My Blog!
 
 <span style="font-family: Arial, Helvetica, sans-serif; text-decoration: underline;"> Thanks for visiting! I hope you like what you read here. Let’s discover new ideas and make life more exciting—together! </span> 
   
 
-##About Me
+## About Me
 
 With **12+ years** of experience in **software engineering, Linux, platform devleopment, embedded system**, I currently specialize in designing and developing high-performance storage solutions at **Micron Technology**.
 
@@ -18,7 +18,7 @@ I’m deeply passionate about **storage performance optimization** and **data-dr
 -----------------  
 
 
-##**Key Responsibilities**  
+## **Key Responsibilities**  
 
 As a **Storage Software Engineer**, I lead projects in:  
 
@@ -31,11 +31,11 @@ As a **Storage Software Engineer**, I lead projects in:
 
 Let’s connect and explore how we can drive innovation together!  
 
-##**Interests**
+## **Interests**
 
 Outside of work, I enjoy traveling and photography. I am also eager to study and learn cutting-edge technologies.
 
-##**Blog Sections**
+## **Blog Sections**
 
 - **Professional Insights**: Articles and posts related to my work experiences, Linux kernel development, storage solutions, and performance optimization.
 - **Learning and Development**: Insights into new technologies, skill development, and continuous learning.
