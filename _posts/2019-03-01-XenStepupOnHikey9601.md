@@ -4,72 +4,72 @@ title: "Xen stetup on hikey960"
 date: 2019-03-01   
 tag: Xen
 ---
-```
-This page is a tutorial about how to setup Xen on Hikey960, it is based on the xen
-wiki official web tutorial(https://wiki.xenproject.org/wiki/HiKey960).Since there are
-several places easily got comfused, I decide to sum up all steps I did.
-```
-### Hikey960 Version
+### Setting Up Xen on HiKey960
 
-Before getting down to doing this, should be aware that there are two kinds of different
-hikey960, the earliest version hikey960 has 3GB DRAM, and the latest version has updated
-its DRAM to 4GB. In my experience, it is munch easier to enable xen on later one.
+This tutorial explains how to set up Xen on the HiKey960. It is based on the official [Xen wiki tutorial](https://wiki.xenproject.org/wiki/HiKey960). Since there are several points that can be confusing, I have summarized all the steps I followed.
 
-### Requirements
+---
 
-The Xen boot follows the sequence as bootloader->xen->linux->xen domain0->xen control bench->domainU.
-Becuase Xen domain0 is bundled in Debain, so I chose Debain as my Linux.
-as for bootloader, I followed Xen WiKi, chose UEFI.
+## **HiKey960 Versions**
+Before proceeding, be aware that there are two versions of the HiKey960:
+- The earliest version has **3GB DRAM**.
+- The latest version has **4GB DRAM**.
 
-here I downloaded these image files:
-#### 1.UEFI:
-http://snapshots.linaro.org/96boards/reference-platform/components/uefi-staging/57/hikey960/release
+In my experience, enabling Xen is much easier on the later version.
 
-according to WiKi, should download tis debug version. I don't know on earth what's difference between these versions.
-I tried debug version, but when I flashed prm_ptable.img with fastboot, it failed. so I used release version.
+---
 
-#### 2. Grub source code
-https://git.savannah.gnu.org/git/grub.git
+## **Requirements**
+The Xen boot sequence follows this order:
 
-Since previous UEFI doesn't support XEN booting command, so I need to update its grub image.
+**Bootloader → Xen → Linux → Xen Domain0 → Xen Control Bench → DomainU**
 
-#### 3. Linux Kernel source code
-https://github.com/96boards-hikey/linux.git -b hikey960-upstream-rebase
+Since Xen Domain0 is bundled with Debian, I chose **Debian** as my Linux distribution. For the bootloader, I followed the Xen Wiki and selected **UEFI**.
 
-#### 4. Tools image
-https://github.com/96boards-hikey/tools-images-hikey960.git #master
+Below are the necessary image files I downloaded:
 
-if your board already flashed them, actaully, you don't need these step's images.
+### **1. UEFI**
+[Download UEFI Image](http://snapshots.linaro.org/96boards/reference-platform/components/uefi-staging/57/hikey960/release)
 
-#### 5. wl18xx-fw-4.bin
+According to the Wiki, you should download the debug version. However, I am unsure of the exact differences between the debug and release versions. When I tried flashing `prm_ptable.img` with `fastboot`, it failed for the debug version, so I used the release version instead.
+
+### **2. Grub Source Code**
+[GRUB Source Code](https://git.savannah.gnu.org/git/grub.git)
+
+Since the provided UEFI does not support Xen boot commands, I needed to update the GRUB image.
+
+### **3. Linux Kernel Source Code**
+[Linux Kernel Repository](https://github.com/96boards-hikey/linux.git) (Branch: `hikey960-upstream-rebase`)
+
+### **4. Tools Image**
+[Tools Image Repository](https://github.com/96boards-hikey/tools-images-hikey960.git) (Branch: `master`)
+
+If your board is already flashed with these tools, you do not need to reflash these images.
+
+### **5. Wi-Fi Firmware (wl18xx-fw-4.bin)**
+Clone from the Linux firmware repository:
+```bash
 git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+```
+This is the Wi-Fi network card driver.
 
-this is WIFI network card driver.
+### **6. Xen Source Code**
+[Xen Source Code](git://xenbits.xen.org/xen.git)
 
-#### 6.Xen source code
-git clone git://xenbits.xen.org/xen.git
+I tested both **Xen 4.12** and **Xen 4.8**, and both work on the HiKey960.
 
-I tried 4.12, and 4.8, both work on Hikey960.
+### **7. Debian Images**
+[Debian Images](http://snapshots.linaro.org/96boards/hikey/linaro/debian/19/)
 
-#### 7. Debian images
-http://snapshots.linaro.org/96boards/hikey/linaro/debian/19/
+This includes two files:
+- `rootfs`
+- `boot.img` (which contains `grub.img`)
 
-it contains two files, one is rootfs, another is boot.img, which includes grub.img.
+---
 
-after getting download all of above images and source code, just follow how to flash Debian on Hikey960.
-https://wiki.debian.org/InstallingDebianOn/96Boards/HiKey960
+## **Flashing Debian on HiKey960**
+After downloading all the required images and source code, follow the official [Debian installation guide](https://wiki.debian.org/InstallingDebianOn/96Boards/HiKey960) to flash Debian onto the HiKey960.
 
-initially flash above images file to UFS. for the next steps, we only to port XEN and update grub.
-I pre-flashed boot and rootfs images since I want to confirm my all dowloaded files are ok.
+Initially, flash the required image files to UFS. In the next steps, we will only port Xen and update GRUB. I pre-flashed the boot and rootfs images to ensure that all my downloaded files were valid.
 
-According to the WiKi, you don't need to flash boot.img (boot-0.0.. so on) and system.img (rpb-console-<something>rootfs.img.gz.
-because we will change its kernel image and grub.img later. this depends on your. pre-flash doesn't involve any problem.
-
-
-
-
-
-
-
-
-
+According to the Wiki, you do not need to flash `boot.img` (`boot-0.0...`) or `system.img` (`rpb-console-<something>rootfs.img.gz`), as we will replace the kernel image and `grub.img` later. However, pre-flashing does not cause any issues, so the choice is yours.
