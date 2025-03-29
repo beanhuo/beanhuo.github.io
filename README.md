@@ -2,7 +2,7 @@
 
 本博客在[Vno Jekyll](https://github.com/onevcat/vno-jekyll)基础上修改的。  
 
-### Jekyll vs Hugo
+## Jekyll vs Hugo
 
 | **Feature**               | **Jekyll**                          | **Hugo**                          |
 |---------------------------|-------------------------------------|-----------------------------------|
@@ -27,6 +27,8 @@
 | **Twitter**               | [@jekyllrb](https://twitter.com/jekyllrb) | [@GoHugoIO](https://twitter.com/GoHugoIO) |
 | **GitHub Repo**           | [jekyll/jekyll](https://github.com/jekyll/jekyll) | [gohugoio/hugo](https://github.com/gohugoio/hugo) |
 
+
+------  
 
 ## Markdown 基本语法 / Basic Markdown Syntax
 
