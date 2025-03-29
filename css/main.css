@@ -120,19 +120,37 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2em; 
-  text-indent: 4px; 
-  border-radius: 4px; 
-  padding: 6px 15px;
-  margin-bottom: 20px;
-  margin-top: 5px;
-  background:#462c11;
-   /*#B9D3EE*/
-  /*0px right, 5px botton, 5px fuzzy*/
-  color: white;        /* White text */
-  box-shadow: 0px 5px 5px #9FB6CD;
-  border-left: 6px solid #1874CD; 
-  position:relative;
+  /* Typography */
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: 0.25px;
+  line-height: 1.4;
+  
+  /* Background & Borders */
+  background: #2d3748; /* A sophisticated dark blue-gray */
+  border-left: 4px solid #4299e1; /* Bright blue accent */
+  border-radius: 4px 0 0 4px; /* Rounded only on left side */
+  
+  /* Spacing */
+  padding: 8px 16px;
+  margin: 24px 0 16px 0;
+  
+  /* Effects */
+  box-shadow: 
+    0 2px 4px rgba(0,0,0,0.1), /* Subtle drop shadow */
+    inset 0 1px 0 rgba(255,255,255,0.05); /* Inner highlight */
+  
+  /* Transition for interactivity */
+  transition: all 0.2s ease;
+}
+
+/* Optional hover effect */
+h3:hover {
+  background: #3c4a5e;
+  border-left-color: #63b3ed;
+  transform: translateX(2px);
 }
 
 h4 {
